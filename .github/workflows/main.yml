@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
+      - name: install-databricks-cli
+        uses: microsoft/install-databricks-cli@v1.0.0
+      
       - name: databricks-import-directory
         uses: microsoft/databricks-import-notebook@v1.0.0
         with:
@@ -33,7 +36,7 @@ jobs:
             # Databricks token
             databricks-token:  ${{secrets.DATABRICKS_TOKEN}}
             # LOCAL_NOTEBOOKS_PATH
-            local-path: '/DATABRICKS/'
+            local-path: '/Databricks/'
             # REMOTE_NOTEBOOK_PATH
             remote-path: '/Project1/'
 
