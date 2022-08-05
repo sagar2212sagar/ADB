@@ -29,12 +29,12 @@ jobs:
         uses: microsoft/databricks-import-notebook@v1.0.0
         with:
             # Databricks host
-            databricks-host: 
+            databricks-host: ${{secrets.DATABRICKS_HOST}}
             # Databricks token
-            databricks-token: # optional
+            databricks-token:  ${{secrets.DATABRICKS_TOKEN}}
             # LOCAL_NOTEBOOKS_PATH
-            local-path: 
+            local-path: '/DATABRICKS/'
             # REMOTE_NOTEBOOK_PATH
-            remote-path: 
+            remote-path: '/Project1/'
 
       
